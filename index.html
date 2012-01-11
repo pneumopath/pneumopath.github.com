@@ -1,0 +1,35 @@
+<html>
+<head>
+<script src='jmat.js'></script>
+<meta name="google-site-verification" content="7fcghhoQd8T11z8Sk0to8AoJB_c209X1KJzd-QHKG5U" />
+<!--<script src='http://jmat.googlecode.com/git/jmat.js'></script>-->
+<link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+<body>
+<p><a href='http://pneumopath.googlecode.com'>SNP</a> - single nucleotide polymorphism analysis</p>
+<p> This application was developed for the <a href=http://pneumopath.org>PNEUMOPATH project</a> to identify SNPs associated with infection by <i>Streptococcus pneumonia</i> but it should be of general applicability to GWAS. The application will take a string matrix with the SNPs separated by a space between genes and, for each row, will ask for one of more phenotype observations:</p>
+
+<h3>Genotype</h3>
+<p>SNP</p>
+<textarea id='SNPs' cols=100 wrap='off'></textarea>
+<br>paste above or <select onclick='snpApp.load(event);' onchange='snpApp.loadSelect(event)'>
+	<option value='load'>load from existing SNP set</option>
+	<option value='dtPneumopath.js'>Pneumopath</option>
+	</select>
+<p>Annotations</p>
+<textarea id='genotypes' cols=100 wrap='off'></textarea>
+<h3>Phenotypes</h3>
+<table>
+	<tr><td id=organisms style="font-size:12px">
+		...
+		</td><td>
+		<textarea id='phenotypes' style="font-size:12px" cols=75 wrap='off'></textarea>
+		</td>
+	</tr>
+</table>
+	
+<button id='snpCalc'>Calc</button>
+<div id='disp'></div>
+<script src='snpApp.js'></script>
+</body>
+</html>
